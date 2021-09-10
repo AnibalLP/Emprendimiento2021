@@ -26,7 +26,7 @@
                         <a href="geolocalizacion.php">MapReciclaje</a>
                         </li>
                         <li>
-                        <a href="/foro/foro.php">Foro</a>
+                        <a href="../foro.php">Foro</a>
                         </li>
                 </ul>
             </div>
@@ -44,7 +44,7 @@
         </nav>
     </header>
     <section class="home">
-    <div id="in-flex">
+            <div id="in-flex">
                     Vivimos en una sociedad consumista y el ser humano actual satisface sus necesidades 
                     adquiriendo los productos que necesita, ya sean alimentos, ropa o cualquier tipo de 
                     objeto material
