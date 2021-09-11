@@ -1,61 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reused Plastic</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
-    <header> <div>
-        <img src="" alt=""> <h1>Reused Plastic</h1></div>
-   
-
-        <nav class="navbar">
-            <div id="contenedor">
-                <ul>
-                        <li>
-                        <a href="">Inicio</a>
+       <div class="container">   
+        <a class="nav-link" href="index.php">
+           <h1 class="text-center color-white">Reused Plastic</h1>
+        </a>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="collapse navbar-collapse bg-success p-2 text-dark bg-opacity-50 position-relative" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link active" href="">Inicio</a>
                         </li>                   
-                        <li> 
-                        <a href="tutoriales.php">Tutoriales</a>
+                        <li class="nav-item"> 
+                        <a class="nav-link" href="tutoriales.php">Tutoriales</a>
                         </li>            
-                        <li>
-                        <a href="geolocalizacion.php">MapReciclaje</a>
+                        <li class="nav-item">
+                        <a class="nav-link" href="geolocalizacion.php">MapReciclaje</a>
                         </li>
-                        <li>
-                        <a href="../foro.php">Foro</a>
+                        <li class="nav-item">
+                        <a class="nav-link" href="Foro/foro.php">Foro</a>
                         </li>
                 </ul>
             </div>
 
-           <!-- <div id="contenedor1">
-                <ul>
-                    <li>
-                        <a href="">Ingresar</a>
-                    </li>
-                    <li>
-                        <a href="">Registrar</a>
-                    </li>
-                </ul>
-            </div>-->
         </nav>
-    </header>
-    <section class="home">
+   
+    
+            <div class="d-flex flex-column bd-highlight mb-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum esse veritatis repellendus, in animi 
+                facere inventore sed incidunt aliquid dicta quia alias nulla, unde rerum, quibusdam quam soluta minus praesentium!
+            </div>
+            <div class="d-xxl-flex p-2 bd-highlight">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium exercitationem illum quidem veritatis consectetur pariatur mollitia molestiae voluptas v
+  oluptatum deleniti! Consectetur assumenda at laudantium quos aspernatur, cupiditate facere quod vitae!
+            </div>
+ 
             <div id="in-flex">
-                    Vivimos en una sociedad consumista y el ser humano actual satisface sus necesidades 
-                    adquiriendo los productos que necesita, ya sean alimentos, ropa o cualquier tipo de 
-                    objeto material
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum esse veritatis repellendus, in animi 
+                facere inventore sed incidunt aliquid dicta quia alias nulla, unde rerum, quibusdam quam soluta minus praesentium!
             </div>
             <div class="in-flex">
-                Somos un equipo con capacidad de creación de software, contamos con los conocimientos 
-                    necesarios para elaborar los trabajos de una forma correcta mediante con todas las metodologías
-                    del manifiesto ágil.
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium exercitationem illum quidem veritatis consectetur pariatur mollitia molestiae voluptas v
+  oluptatum deleniti! Consectetur assumenda at laudantium quos aspernatur, cupiditate facere quod vitae!
             </div>
-    </section>
-            
+
+            <div id="in-flex">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum esse veritatis repellendus, in animi 
+                facere inventore sed incidunt aliquid dicta quia alias nulla, unde rerum, quibusdam quam soluta minus praesentium!
+            </div>
+            <div class="in-flex">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium exercitationem illum quidem veritatis consectetur pariatur mollitia molestiae voluptas v
+  oluptatum deleniti! Consectetur assumenda at laudantium quos aspernatur, cupiditate facere quod vitae!
+            </div>
+  
+            <div id="in-flex">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum esse veritatis repellendus, in animi 
+                facere inventore sed incidunt aliquid dicta quia alias nulla, unde rerum, quibusdam quam soluta minus praesentium!
+            </div>
+            <div class="in-flex">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium exercitationem illum quidem veritatis consectetur pariatur mollitia molestiae voluptas v
+  oluptatum deleniti! Consectetur assumenda at laudantium quos aspernatur, cupiditate facere quod vitae!
+            </div>
+    
+   
+            <div id="in-flex">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum esse veritatis repellendus, in animi 
+                facere inventore sed incidunt aliquid dicta quia alias nulla, unde rerum, quibusdam quam soluta minus praesentium!
+            </div>
+            <div class="in-flex">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium exercitationem illum quidem veritatis consectetur pariatur mollitia molestiae voluptas v
+  oluptatum deleniti! Consectetur assumenda at laudantium quos aspernatur, cupiditate facere quod vitae!
+            </div>
+
+   
+            <div id="in-flex">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum esse veritatis repellendus, in animi 
+                facere inventore sed incidunt aliquid dicta quia alias nulla, unde rerum, quibusdam quam soluta minus praesentium!
+            </div>
+            <div class="in-flex">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium exercitationem illum quidem veritatis consectetur pariatur mollitia molestiae voluptas v
+  oluptatum deleniti! Consectetur assumenda at laudantium quos aspernatur, cupiditate facere quod vitae!
+            </div>
+ 
+   
+            <div id="in-flex">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum esse veritatis repellendus, in animi 
+                facere inventore sed incidunt aliquid dicta quia alias nulla, unde rerum, quibusdam quam soluta minus praesentium!
+            </div>
+            <div class="in-flex">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium exercitationem illum quidem veritatis consectetur pariatur mollitia molestiae voluptas v
+  oluptatum deleniti! Consectetur assumenda at laudantium quos aspernatur, cupiditate facere quod vitae!
+            </div>
+  
 
 <script
 src="https://code.jquery.com/jquery-3.6.0.js" 
@@ -75,6 +120,6 @@ crossorigin="anonymous">
 	});
 });
 </script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>

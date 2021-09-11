@@ -1,62 +1,9 @@
-*{
-    padding: 0px;
-    margin: 0px;
-}
 body{
-    font-family:Georgia,serif,Times;
-}
-.navbar{
-    margin: 20px;
-    float:inline-end;
-    display: block;
-    border-radius: 10px;
-    overflow: hidden;
-    padding-top: 15px;
-}
-#contenedor ul li{
-    font-size:18px;
-    display:inline-block;
-    width:15%;
-    margin: 5px;
-    padding:5px 10px;
-    text-align:center;
-   
+    background-image: url("../images/2.jpg");
+    
 }
 
-#contenedor ul li a{
-    color:black;
-    width:300px; 
-    height:28px; 
-    padding-left:5px;
-    text-decoration: none;
-}
-
-.navbar-fixed {
-        position:fixed;
-        z-index:1000;
-        top:0;
-        /*max-width:1000px;*/
-        left:0;
-        width:100%;
-}
 h1{
-    margin: 5px;
-}
-
-.home {
-display: flex;
-background-color: cadetblue;
-}
-
-.in-flex{
-    flex:1;
-    padding: 25px;
-    background-color: burlywood;
-}
-.in-flex :first-child{
-    flex: 2;
-    padding: 25px;
-    margin-right: 20px;
-
+    color: antiquewhite;
 }
 
