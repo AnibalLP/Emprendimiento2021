@@ -11,8 +11,8 @@
 </head>
 <body>
 
-       <div class="container">
-           <a class="nav-link" href="../index.php"><h1 class="text-center">Reused Plastic</h1></a>
+        <div class="encabezado">   
+        <a class="enca" href="../index.php">Reused Plastic</a>
         </div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="collapse navbar-collapse bg-success p-2 text-dark bg-opacity-50 position-relative" id="navbarSupportedContent">
@@ -31,8 +31,7 @@
                         </li>
                 </ul>
             </div>
-
-        
         </nav>
+        
 </body>
 </html>
