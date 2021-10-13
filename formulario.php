@@ -20,7 +20,7 @@ include 'menu.php';
 		</div>
 		<!--Formulario para el login -->
         <form id="frmlogin" class="grupo-entradas" method="POST" action="login.php">
-		<div class="logovai"><img src="img/logo.png"></div>
+		<div class="logovai"><img src="images/logo.jpg"></div>
 		<b>&#128231; Correo</b>
         <input type="email" class="cajaentradatexto" name="txtcorreo" required>
 		<b>&#128274; Contraseña</b>
