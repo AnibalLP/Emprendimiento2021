@@ -8,13 +8,13 @@
                         <a class="nav-link active" href="">Inicio</a>
                         </li>                   
                         <li class="nav-item"> 
-                        <a class="nav-link" href="tutos.php?">Tutoriales</a>
+                        <a class="nav-link" href="welcome/tutoriales/form.php">Tutoriales</a>
                         </li>            
                         <li class="nav-item">
                         <a class="nav-link" href="welcome/geolocalizacion.php">MapReciclaje</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="Foro/foro.php">Foro</a>
+                        <a class="nav-link" href="welcome/Foro/foro.php">Foro</a>
                         </li>
                 </ul>
             </div>

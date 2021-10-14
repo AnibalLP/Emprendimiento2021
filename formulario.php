@@ -7,9 +7,7 @@
      <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<?php
-include 'menu.php';
-     ?>
+<
 
     <div class="cajafuera">
     <div class="formulariocaja">

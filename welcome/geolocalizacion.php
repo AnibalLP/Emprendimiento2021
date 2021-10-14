@@ -10,32 +10,30 @@
 </head>
 
 <body>
-    
 <div class="encabezado">   
-            <a class="enca" href="index.php">Reused Plastic</a>
+        <a class="enca" href="">Reused Plastic</a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark align-center">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                        <a class="nav-link " href="../index.php">Inicio</a>
+                        </li>                   
+                        <li class="nav-item"> 
+                        <a class="nav-link" href="tutoriales/form.php">Tutoriales</a>
+                        </li>            
+                        <li class="nav-item">
+                        <a class="nav-link active" href="">MapReciclaje</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="../welcome/Foro/foro.php">Foro</a>
+                        </li>
+                </ul>
             </div>
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark align-center">
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                            <li class="nav-item">
-                            <a class="nav-link" href="Emprendimiento2021/index.php">Inicio</a>
-                            </li>                   
-                            <li class="nav-item"> 
-                            <a class="nav-link" href="tutoriales.php">Tutoriales</a>
-                            </li>            
-                            <li class="nav-item">
-                            <a class="nav-link" href="geolocalizacion.php">MapReciclaje</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="Foro/foro.php">Foro</a>
-                            </li>
-                    </ul>
-               
-                </div>
-            </nav>
+        </nav>
 	<div id ="map"> </div> 
-        
+    <h1>geolicalizar lugares de reciclaje</h1>    
+    
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYoCJkilVnx876MoAdlUuIef5bY31iBsg&callback=initMap"
     type="text/javascript"></script>
   
