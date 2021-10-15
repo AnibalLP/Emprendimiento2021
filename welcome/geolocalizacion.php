@@ -31,8 +31,29 @@
                 </ul>
             </div>
         </nav>
-	<div id ="map"> </div> 
-    <h1>geolicalizar lugares de reciclaje</h1>    
+	<div id ="mapa"> 
+    <h1>Aquí ira nuestro mapa</h1>
+    </div>
+    <!--JAVASCRIP-->
+        <script type="text/javascript">
+        
+        navigator.geolocation.getCurrentPosition(fn_ok, fn_error)
+        
+        var divMapa = document.getElementById('mapa');
+        
+        function fn_mal(){}
+        function fn_ok(respuesta){
+            
+            var lat = respuesta.coords.latitud;   
+            var lon = respuesta.coords.longitude;   
+            var coordenada = lat+','+lon;
+
+           
+            //divMapa.innerHTML = 'Estamos mostrando su ubicación con éxito';
+            divMapa.innerHTML = '<img src="http://maps.googleapis.com/maps/api/staticmap?size=700x400&markers='+coordenada'" />';
+        }
+        
+        </script>
     
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYoCJkilVnx876MoAdlUuIef5bY31iBsg&callback=initMap"
     type="text/javascript"></script>
