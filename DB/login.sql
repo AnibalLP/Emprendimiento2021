@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2021 a las 03:49:32
+-- Tiempo de generación: 16-10-2021 a las 06:54:34
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -39,6 +39,26 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`correo`, `pass`, `user`) VALUES
 ('frpsnow21@gmail.com', '123456', 'anibal1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `videos`
+--
+
+CREATE TABLE `videos` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `ubicacion` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `videos`
+--
+
+INSERT INTO `videos` (`id`, `nombre`, `ubicacion`) VALUES
+(0, 'prueba 1', 'prueba-34.mp4'),
+(0, '', 'prueba-511.mp4');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

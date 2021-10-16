@@ -36,12 +36,12 @@ font-size: 25px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.container{
+.containe{
     width: 200px;  
     font-family: 'Montserrat', sans-serif;
 }
 
-.container .titulo{
+.containe .titulo{
     align-items: center;
     display: flex;
     height: 150px;
@@ -50,11 +50,11 @@ font-size: 25px;
     font-size: 85px;
 }
 
-.container .contenido p{
+.containe .contenido p{
     font-size: 25px;
     text-align: center;
 }
-.container:hover{
+.containe:hover{
     color:cadetblue;
 }
 
