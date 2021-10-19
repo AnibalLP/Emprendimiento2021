@@ -1,10 +1,9 @@
 <header>
-      <div class="encabezado">   
-        <a class="enca" href="">Reused Plastic</a>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark align-center">
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+    <div class="navegacion">   
+        <nav class="nav">
+            <div class="collapse">
+            <a class="banner" href="/Emprendimiento2021/Comenzando/">Reused Plastic</a>
+                <ul class="navbar">
                         <li class="nav-item">
                         <a class="nav-link " href="../../index.php">Inicio</a>
                         </li>                   
@@ -20,4 +19,5 @@
                 </ul>
             </div>
         </nav>
+    </div>
 </header>
