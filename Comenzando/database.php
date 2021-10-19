@@ -1,15 +1,15 @@
 <?php
-    $host = "localhost";
-    $dbname = "login";
-    $username = "root";
-    $password = "";
 
-    try {
-        $db = new PDO("mysql:host={$host};dbname={$dbname}", $username, $password);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $exception){
-        die("Connection error: " . $exception->getMessage());
-    }
+$server = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'database';
+
+try {
+  $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
+} catch (PDOException $e) {
+  die('Connection Failed: ' . $e->getMessage());
+}
 
 function format_uri( $string, $separator = '-' )
 {

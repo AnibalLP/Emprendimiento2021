@@ -16,7 +16,7 @@
 <body>
 <div class="encabezado">   
         <a class="enca" href="">Reused Plastic</a>
-        </div>
+</div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark align-center">
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
@@ -32,12 +32,17 @@
                         <li class="nav-item">
                         <a class="nav-link" href="welcome/Foro/foro.php">Foro</a>
                         </li>
+
+                        
+                        <?php
+                        include('boton.php')
+                        ?>
                 </ul>
             </div>
         </nav>
               
     
-    <div class="containe">
+    <div class="container row 4">
            <div class="titulo">Vision</div> 
            <div class="contenido">
                 <p>Somos un equipo con capacidad de creación de software,contamos con los conocimientos
@@ -46,14 +51,21 @@
             </div>
     </div>
     
-    <div class="containe">
+    
+    <div class="container row 4">
             <div class="titulo">Mision</div> 
             <div class="contenido">
                 <p>Ser un equipo que cuente con los conocimientos necesarios a la hora de desarrollar software.</p>    
             </div>
         
     </div>
-    
+
+    <div class="grid col-6">
+    <h5>
+        Videos recomendados
+    </h5>
+    </div>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 

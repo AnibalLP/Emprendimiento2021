@@ -1,8 +1,5 @@
 /*index*/
-body{
-    padding: 0;
-    margin: 0;
-}
+
 .encabezado{
    font-size: 30px;
    text-align: center;
@@ -18,45 +15,15 @@ body{
 }
 
 .nav-link{
-    font-size: 25px;
-    margin: 5px;
+    font-size: 10px;
+    
 }
 .nav-item{
-    margin: 5px;
+  
     align-items: center;
+
 }
 
-.d-flex a{
-font-size: 25px;
-}
-
-.btn{
-    margin: 15px;
-    width: 300px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.containe{
-    width: 200px;  
-    font-family: 'Montserrat', sans-serif;
-}
-
-.containe .titulo{
-    align-items: center;
-    display: flex;
-    height: 150px;
-    justify-content: center;
-    text-size-adjust: 200px;
-    font-size: 85px;
-}
-
-.containe .contenido p{
-    font-size: 25px;
-    text-align: center;
-}
-.containe:hover{
-    color:cadetblue;
-}
 
 /*hasta aqui esta solo el diseño de index */
 /*tutoriales*/
