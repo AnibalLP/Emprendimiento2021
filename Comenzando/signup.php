@@ -29,7 +29,7 @@
     
 </head>
   <body>
-
+  <?php require 'partials/header1.php' ?>
    
 
     <?php if(!empty($message)): ?>
@@ -37,13 +37,20 @@
     <?php endif; ?>
 
     <h1>Registro</h1>
-    <span>o <a href="login.php">Iniciar Sesion</a></span>
+    
 
     <form action="signup.php" method="POST">
       <input name="email" type="text" placeholder="Enter your email">
       <input name="password" type="password" placeholder="Enter your Password">
       <input name="confirm_password" type="password" placeholder="Confirm Password">
-      <input type="submit" value="Submit">
+      <input type="submit" value="Enviar">
     </form>
+
+
+
+   
+
+    <button class="botones" ><a class="botones-RL" href="login.php">Iniciar Sesion</a></button> 
+
   </body>
 </html>

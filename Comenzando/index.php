@@ -18,10 +18,11 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <title>Bienvenido</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0" >
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
@@ -29,15 +30,13 @@
     <?php require 'partials/header1.php' ?>
     <?php if(!empty($user)): ?>
       <br> <a class="texto">Bienvenid@ <?= $user['email']; ?>
-      <br>te has logeado!</a> 
-      <a class="texto" href="logout.php">
-        Salir
-      </a>
+      te has logeado!</a> 
+    <button><a class="botones-RL" href="logout.php">Cerrar Sesion</a></button>
     <?php else: ?>
       <h1>UNETE POR UN MUNDO MEJOR!!</h1>
 
-      <a href="login.php">Inicia Sesion</a> o
-      <a href="signup.php">Registrate</a>
+      <button><a href="login.php">Inicia Sesion</a></button> o
+      <button><a href="signup.php">Registrate</a></button>
     <?php endif; ?>
 
 <div class="contenedor">

@@ -34,19 +34,23 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <?php require 'partials/header.php' ?>
+    <?php require 'partials/header1.php' ?>
 
     <?php if(!empty($message)): ?>
       <p> <?= $message ?></p>
     <?php endif; ?>
 
     <h1>Login</h1>
-    <span>or <a href="signup.php">SignUp</a></span>
+    
 
     <form action="login.php" method="POST">
       <input name="email" type="text" placeholder="Enter your email">
       <input name="passwrd" type="password" placeholder="Enter your Password">
-      <input type="submit" value="Submit">
+      <input type="submit" value="Acceder">
     </form>
+
+    <button class="botones" ><a class="botones-RL" href="signup.php">Registrate</a></button>
+
+
   </body>
 </html>
