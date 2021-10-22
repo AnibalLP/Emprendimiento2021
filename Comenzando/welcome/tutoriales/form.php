@@ -98,7 +98,8 @@ $(".custom-file-input").on("change", function() {
           </div>
           <button type="submit" class="btn btn-primary" name='video_upload'>Subir Video</button>
 	</form>
-
+<br>
+<br>
  </div>
  </div>
 
