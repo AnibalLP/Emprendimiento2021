@@ -40,12 +40,12 @@
       <p> <?= $message ?></p>
     <?php endif; ?>
 
-    <h1>Login</h1>
+    <h1>Inicio de sesión</h1>
     
 
     <form action="login.php" method="POST">
-      <input name="email" type="text" placeholder="Ingresa tu email">
-      <input name="passwrd" type="password" placeholder="Ingresa tu contraseña">
+      <input name="email" type="text" placeholder="Ingrese su email">
+      <input name="passwrd" type="password" placeholder="Ingrese su contraseña">
       <input type="submit" value="Acceder">
     </form>
 
