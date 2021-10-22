@@ -19,7 +19,7 @@
       $_SESSION['user_id'] = $results['id'];
       header("Location: /Emprendimiento2021/Comenzando/index.php");
     } else {
-      $message = 'Sorry, those credentials do not match';
+      $message = '¡Lo siento, Las credenciales no coinciden!';
     }
   }
 
@@ -44,8 +44,8 @@
     
 
     <form action="login.php" method="POST">
-      <input name="email" type="text" placeholder="Enter your email">
-      <input name="passwrd" type="password" placeholder="Enter your Password">
+      <input name="email" type="text" placeholder="Ingresa tu email">
+      <input name="passwrd" type="password" placeholder="Ingresa tu contraseña">
       <input type="submit" value="Acceder">
     </form>
 
