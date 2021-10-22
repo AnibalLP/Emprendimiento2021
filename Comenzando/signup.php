@@ -12,9 +12,9 @@
     $stmt->bindParam(':passwrd', $password);
 
     if ($stmt->execute()) {
-      $message = 'Successfully created new user';
+      $message = 'Usuario creado con éxito';
     } else {
-      $message = 'Sorry there must have been an issue creating your account';
+      $message = 'Lo sentimos, hubo un problema al crear su cuenta.';
     }
   }
 ?>
@@ -40,9 +40,9 @@
     
 
     <form action="signup.php" method="POST">
-      <input name="email" type="text" placeholder="Enter your email">
-      <input name="password" type="password" placeholder="Enter your Password">
-      <input name="confirm_password" type="password" placeholder="Confirm Password">
+      <input name="email" type="text" placeholder="Ingrese su email">
+      <input name="password" type="password" placeholder="Igrese una contraseña">
+      <input name="confirm_password" type="password" placeholder="Confirme contraseña">
       <input type="submit" value="Enviar">
     </form>
 
