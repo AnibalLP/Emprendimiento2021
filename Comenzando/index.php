@@ -27,11 +27,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <?php require 'partials/header1.php' ?>
+
+  <?php require 'partials/header1.php'?>
+
+   
     <?php if(!empty($user)): ?>
       <br> <a class="texto">Bienvenid@ <?= $user['email']; ?>
       te has logeado!</a> 
-    <button><a class="botones-RL" href="logout.php">Cerrar Sesion</a></button>
     <?php else: ?>
       <h1>UNETE POR UN MUNDO MEJOR!!</h1>
 

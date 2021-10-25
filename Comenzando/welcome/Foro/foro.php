@@ -9,9 +9,21 @@
 </head>
 <body>
 <?php require '../../partials/header4.php' ?>
+<div class="foro">
 
-<button class="boton"><a  href="logout.php">Cerrar Sesion</a></button>
-        <h1>aqui sera donde podremos hacer el chat y los propuestas de campaña</h1>
+<div class="foro-chat">
+<h3 class="foro-titulo">chat</h3>
+
+<input type="text" name="Mensaje" id="mensaje">
+
+<button class="foro-boton">Solicitar Campaña</button>
+</div>
+
+<div class="foro-conectados">
+    <h3 class="foro-titulo">usuarios conectados</h3>
+</div>
+</div>
+
 
 </body>
 </html>

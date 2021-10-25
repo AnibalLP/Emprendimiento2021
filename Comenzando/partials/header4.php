@@ -16,6 +16,10 @@
                         <li class="nav-item">
                         <a class="nav-link active" href="">Foro</a>
                         </li>
+                      
+                          <button class="botones-RL"><a  href="../../logout.php">Cerrar Sesion</a></button>
+                    
+                        
                 </ul>
             </div>
         </nav>

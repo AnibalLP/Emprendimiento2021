@@ -9,11 +9,11 @@
 </head>
 <body>
 <?php require '../partials/header3.php' ?>
-<button class="boton"><a  href="logout.php">Cerrar Sesion</a></button>
+
 	<div id ="mapa"> 
-    <h1>Aquí ira nuestro mapa</h1>
+    <h1>Aquí ira EL mapa</h1>
     </div>
-    <!--JAVASCRIP-->
+    
         <script type="text/javascript">
         
         navigator.geolocation.getCurrentPosition(fn_ok, fn_error)
@@ -28,7 +28,7 @@
             var coordenada = lat+','+lon;
 
            
-            //divMapa.innerHTML = 'Estamos mostrando su ubicación con éxito';
+            
             divMapa.innerHTML = '<img src="http://maps.googleapis.com/maps/api/staticmap?size=700x400&markers='+coordenada'" />';
         }
         

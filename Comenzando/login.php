@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <?php require 'partials/header1.php' ?>
+    <?php require 'partials/header0.php' ?>
 
     <?php if(!empty($message)): ?>
       <p> <?= $message ?></p>

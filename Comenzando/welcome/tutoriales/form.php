@@ -60,7 +60,7 @@
     <body>
     <?php require '../../partials/header2.php' ?>
 <main role="main" class="flex-shrink-0">
-<button class="boton"><a  href="logout.php">Cerrar Sesion</a></button>
+
 <div class="container">
 
 
@@ -74,7 +74,7 @@
 	  echo '<div class="alert alert-success" role="alert"> Video subido correctamente</div>';
 	}
   ?>  
-    <div class="row">
+    <div class="ro">
     
      <form method="post" action="" enctype='multipart/form-data'>
           <div class="form-group">
@@ -104,6 +104,11 @@ $(".custom-file-input").on("change", function() {
  </div>
 
 
+
+ </main>
+    <!-- AquÃ­ va el contenido de tu web -->
+
+    
  <div class="container">
 <div class="row">
 <h3 class="mt-5">Videos Subidos</h3>
@@ -124,9 +129,6 @@ $(".custom-file-input").on("change", function() {
           
 </div>
  </div>
-
- </main>
-    <!-- AquÃ­ va el contenido de tu web -->
  
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>    <!-- Bootstrap CSS -->
