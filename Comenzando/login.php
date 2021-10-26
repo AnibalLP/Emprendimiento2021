@@ -20,9 +20,8 @@
       header("Location: /Emprendimiento2021/Comenzando/index.php");
     } else {
       $message = '¡Lo siento, Las credenciales no coinciden!';
-    }
-  }
-
+    }        
+  }    
 ?>
 
 <!DOCTYPE html>
@@ -46,12 +45,11 @@
     
 
     <form action="login.php" method="POST">
-      <input name="email" type="text" placeholder="Ingrese su email">
-      <input name="passwrd" type="password" placeholder="Ingrese su contraseña">
+      <input name="email" type="text" require pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Ingrese su email">
+      <input name="passwrd" type="password" require pattern="[A-Za-z0-9¿?#$]{6,8}" placeholder="Ingrese su contraseña">
       <input type="submit" value="Acceder">
     </form>
 
     <button class="botones" ><a class="botones-RL" href="signup.php">Registrate</a></button>
-
   </body>
 </html>
