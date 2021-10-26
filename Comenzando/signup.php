@@ -40,9 +40,9 @@
     
 
     <form action="signup.php" method="POST">
-      <input name="email" type="text" placeholder="Ingrese su email">
-      <input name="password" type="password" placeholder="Igrese una contraseña">
-      <input name="confirm_password" type="password" placeholder="Confirme contraseña">
+      <input name="email" type="text" require pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Ingrese su email">
+      <input name="password" type="password" require pattern="[A-Za-z0-9¿?#$]{6,8}" placeholder="Igrese una contraseña">
+      <input name="confirm_password" type="password" require pattern="[A-Za-z0-9¿?#$]{6,8}" placeholder="Confirme contraseña">
       <input type="submit" value="Enviar">
     </form>
 
