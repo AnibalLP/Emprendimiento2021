@@ -32,6 +32,8 @@
     <title>Login</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!--PARA QUE SE ADAPTE A CUALQUIER PANTALLA-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <body>
     <?php require 'partials/header0.php' ?>
@@ -50,7 +52,6 @@
     </form>
 
     <button class="botones" ><a class="botones-RL" href="signup.php">Registrate</a></button>
-
 
   </body>
 </html>
