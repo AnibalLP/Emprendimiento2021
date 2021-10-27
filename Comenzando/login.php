@@ -46,7 +46,7 @@
       <input name="passwrd" type="password" placeholder="Ingrese su contraseña">
       <input type="submit" value="Acceder">
     </form>
-
     <button class="botones" ><a class="botones-RL" href="signup.php">Registrate</a></button>
+    
   </body>
 </html>

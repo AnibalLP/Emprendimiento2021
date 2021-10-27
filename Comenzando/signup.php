@@ -38,8 +38,6 @@
     <?php endif; ?>
 
     <h1>Registro</h1>
-    
-
     <form action="signup.php" method="POST">
     <input name="usuario" type="text" placeholder="Ingrese su nombre">
       <input name="email" type="text" placeholder="Ingrese su email">
@@ -47,11 +45,6 @@
       <input name="confirm_password" type="password" placeholder="Confirme contraseña">
       <input type="submit" value="Enviar">
     </form>
-
-
-
-   
-
     <button class="botones" ><a class="botones-RL" href="login.php">Iniciar Sesion</a></button> 
 
   </body>

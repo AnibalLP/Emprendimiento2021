@@ -13,7 +13,7 @@
             $maxsize = 1024242880; // 1GB
             $nombre_file = $_FILES['file_video']['name'];
 			//
-			$image_info = explode(".", $nombre_file); 
+			$image_info = explode(".", $nombre_file);
 			$nombre =format_uri($image_info[0]);
 			$image_type = end($image_info);
 			$file_video = $nombre."-".rand(10,999).".".$image_type;
@@ -38,9 +38,9 @@
                     if(move_uploaded_file($_FILES['file_video']['tmp_name'],$target_file)){
                         // Insertar registro
 						$nombre = htmlentities($_POST['nombre']);
-						$query = $conn->prepare("INSERT INTO `videos`(`nombre`, `ubicacion`)
-						VALUES (:nombre,:ubicacion)");
-            	
+						$query = $conn->prepare("INSERT INTO `videos`(`id_user`,`nombre`, `ubicacion`)
+						VALUES (:id_user,:nombre,:ubicacion)");
+						$query->bindParam(":id_user", $idu);            
 						$query->bindParam(":nombre", $nombre);
 						$query->bindParam(":ubicacion", $file_video);
 						$query->execute();
@@ -109,11 +109,12 @@ $(".custom-file-input").on("change", function() {
     $query->execute();
     $data = $query->fetchAll();
         foreach ($data as $row):
+            $idu=$row['id_user']; 
             $nombre=$row['nombre'];
             $ubicacion = $row['ubicacion'];
             echo "<div'>";
             echo "<h3>$nombre</h3>";
-            echo "<video src='videos/".$ubicacion."' controls width='auto' height='auto' >";
+            echo "<video src='videos/".$ubicacion."' controls width='250px' height='250px' >";
             echo "</div>";
         endforeach;
         ?>    
