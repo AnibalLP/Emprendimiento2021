@@ -4,7 +4,7 @@
   require 'database.php';
 
   if (isset($_SESSION['user_id'])) {
-    $records = $conn->prepare('SELECT id, email, passwrd FROM users WHERE id = :id');
+    $records = $conn->prepare('SELECT id, usuario, email, passwrd FROM users WHERE id = :id');
     $records->bindParam(':id', $_SESSION['user_id']);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
@@ -32,7 +32,7 @@
 
    
     <?php if(!empty($user)): ?>
-      <br> <a class="texto">Bienvenid@ <?= $user['email']; ?>
+      <br> <a class="texto">Bienvenid@ <?= $user['usuario']; ?>
       te has logeado!</a> 
     <?php else: ?>
       <h1>UNETE POR UN MUNDO MEJOR!!</h1>

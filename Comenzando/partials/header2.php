@@ -17,7 +17,7 @@
                         <a class="nav-link" href="../Foro/foro.php">Foro</a>
                         </li>
                         
-                          <button class="botones-RL"><a  href="../../logout.php">Cerrar Sesion</a></button>
+                        <button class="botones-RL"><a  href="../../logout.php">Cerrar Sesion</a></button>
                     
                         
                 </ul>

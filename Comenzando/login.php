@@ -7,8 +7,8 @@
   }
   require 'database.php';
 
-  if (!empty($_POST['email']) && !empty($_POST['passwrd'])) {
-    $records = $conn->prepare('SELECT id, email, passwrd FROM users WHERE email=:email');
+  if (!empty($_POST['usuario']) && !empty($_POST['email']) && !empty($_POST['passwrd'])) {
+    $records = $conn->prepare('SELECT id, usuario, email, passwrd FROM users WHERE email=:email');
     $records->bindParam(':email', $_POST['email']);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
@@ -45,8 +45,14 @@
     
 
     <form action="login.php" method="POST">
+<<<<<<< Updated upstream
       <input name="email" type="text" require pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Ingrese su email">
       <input name="passwrd" type="password" require pattern="[A-Za-z0-9¿?#$]{6,8}" placeholder="Ingrese su contraseña" title="Ejemplo: Persona1 - entre 6 y 8 caracteres">
+=======
+    <input name="usuario" type="text" placeholder="Ingrese su nombre">
+      <input name="email" type="text" placeholder="Ingrese su email">
+      <input name="passwrd" type="password" placeholder="Ingrese su contraseña">
+>>>>>>> Stashed changes
       <input type="submit" value="Acceder">
     </form>
 

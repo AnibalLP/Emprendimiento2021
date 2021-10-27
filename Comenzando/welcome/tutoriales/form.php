@@ -38,9 +38,9 @@
                     if(move_uploaded_file($_FILES['file_video']['tmp_name'],$target_file)){
                         // Insertar registro
 						$nombre = htmlentities($_POST['nombre']);
-				
 						$query = $conn->prepare("INSERT INTO `videos`(`nombre`, `ubicacion`)
 						VALUES (:nombre,:ubicacion)");
+            	
 						$query->bindParam(":nombre", $nombre);
 						$query->bindParam(":ubicacion", $file_video);
 						$query->execute();
@@ -59,34 +59,33 @@
     </head>
     <body>
     <?php require '../../partials/header2.php' ?>
+  
 <main role="main" class="flex-shrink-0">
 
-<div class="container">
-
-
+<div class="contain">
   <?php
   if(isset($error)){
-	  echo '<div class="alert alert-danger" role="alert"> '.$error.'</div>';
+	echo '<div class="alert alert-danger" role="alert"> '.$error.'</div>';
 	}
   ?>
   <?php
   if(isset($_GET["estado"])){
-	  echo '<div class="alert alert-success" role="alert"> Video subido correctamente</div>';
+	/*echo '<div class="alert alert-success" role="alert"> Video subido correctamente</div>';*/
 	}
   ?>  
-    <div class="ro">
+    <div class="row">
     
-     <form method="post" action="" enctype='multipart/form-data'>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Nombre de Video</label>
+    <form method="post" action="" enctype='multipart/form-data'>
+          <div class="form-grop">
+            <label for="exampleInputEmail1">Subir Video</label>
             <input name="nombre" type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese nombre">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Video</label>
+          
 
-<div class="custom-file mt-3 mb-3">
+<div class="custom">
   <input name="file_video" type="file" class="custom-file-input" id="customFile" required>
-  <label class="custom-file-label selected" for="customFile"></label>
+  <label class="custom" for="customFile"></label>
 </div>
 <script>
 
@@ -98,39 +97,30 @@ $(".custom-file-input").on("change", function() {
           </div>
           <button type="submit" class="btn btn-primary" name='video_upload'>Subir Video</button>
 	</form>
-<br>
-<br>
+
  </div>
  </div>
-
-
-
  </main>
-    <!-- AquÃ­ va el contenido de tu web -->
 
-    
  <div class="container">
-<div class="row">
-<h3 class="mt-5">Videos Subidos</h3>
-</div>
-  <hr>  
     <div class="row">
      <?php
-    $query = $conn->prepare("SELECT * FROM videos ORDER BY id DESC");
+    $query = $conn->prepare("SELECT * FROM videos ORDER BY nombre DESC");
     $query->execute();
     $data = $query->fetchAll();
         foreach ($data as $row):
+            $nombre=$row['nombre'];
             $ubicacion = $row['ubicacion'];
-            echo "<div class='col-md-3'>";
-            echo "<video src='videos/".$ubicacion."' controls width='100%' height='200px' >";
+            echo "<div'>";
+            echo "<h3>$nombre</h3>";
+            echo "<video src='videos/".$ubicacion."' controls width='auto' height='auto' >";
             echo "</div>";
         endforeach;
-        ?>
-          
+        ?>    
 </div>
  </div>
  
-    <!-- JavaScript -->
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>    <!-- Bootstrap CSS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

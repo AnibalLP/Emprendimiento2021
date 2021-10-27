@@ -4,9 +4,10 @@
 
   $message = '';
 
-  if (!empty($_POST['email']) && !empty($_POST['password'])) {
-    $sql = "INSERT INTO users (email, passwrd) VALUES (:email, :passwrd)";
+  if (!empty($_POST['usuario']) && !empty($_POST['email']) && !empty($_POST['password'])) {
+    $sql = "INSERT INTO users (usuario,email, passwrd) VALUES (:usuario, :email, :passwrd)";
     $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':usuario', $_POST['usuario']);
     $stmt->bindParam(':email', $_POST['email']);
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
     $stmt->bindParam(':passwrd', $password);
@@ -40,9 +41,16 @@
     
 
     <form action="signup.php" method="POST">
+<<<<<<< Updated upstream
       <input name="email" type="text" require pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Ingrese su email">
       <input name="password" type="password" require pattern="[A-Za-z0-9¿?#$]{6,8}" placeholder="Ingrese una Contraseña" title="Ejemplo: Persona1 - entre 6 y 8 caracteres">
       <input name="confirm_password" type="password" require pattern="[A-Za-z0-9¿?#$]{6,8}" placeholder="Confirme contraseña" title="Ejemplo: Persona1 - entre 6 y 8 caracteres">
+=======
+    <input name="usuario" type="text" placeholder="Ingrese su nombre">
+      <input name="email" type="text" placeholder="Ingrese su email">
+      <input name="password" type="password" placeholder="Igrese una contraseña">
+      <input name="confirm_password" type="password" placeholder="Confirme contraseña">
+>>>>>>> Stashed changes
       <input type="submit" value="Enviar">
     </form>
 
