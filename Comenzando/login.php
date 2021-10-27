@@ -31,8 +31,6 @@
     <title>Login</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!--PARA QUE SE ADAPTE A CUALQUIER PANTALLA-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <body>
     <?php require 'partials/header0.php' ?>
@@ -42,17 +40,10 @@
     <?php endif; ?>
 
     <h1>Inicio de sesión</h1>
-    
-
     <form action="login.php" method="POST">
-<<<<<<< Updated upstream
-      <input name="email" type="text" require pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Ingrese su email">
-      <input name="passwrd" type="password" require pattern="[A-Za-z0-9¿?#$]{6,8}" placeholder="Ingrese su contraseña" title="Ejemplo: Persona1 - entre 6 y 8 caracteres">
-=======
     <input name="usuario" type="text" placeholder="Ingrese su nombre">
       <input name="email" type="text" placeholder="Ingrese su email">
       <input name="passwrd" type="password" placeholder="Ingrese su contraseña">
->>>>>>> Stashed changes
       <input type="submit" value="Acceder">
     </form>
 

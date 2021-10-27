@@ -41,16 +41,10 @@
     
 
     <form action="signup.php" method="POST">
-<<<<<<< Updated upstream
-      <input name="email" type="text" require pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Ingrese su email">
-      <input name="password" type="password" require pattern="[A-Za-z0-9¿?#$]{6,8}" placeholder="Ingrese una Contraseña" title="Ejemplo: Persona1 - entre 6 y 8 caracteres">
-      <input name="confirm_password" type="password" require pattern="[A-Za-z0-9¿?#$]{6,8}" placeholder="Confirme contraseña" title="Ejemplo: Persona1 - entre 6 y 8 caracteres">
-=======
     <input name="usuario" type="text" placeholder="Ingrese su nombre">
       <input name="email" type="text" placeholder="Ingrese su email">
       <input name="password" type="password" placeholder="Igrese una contraseña">
       <input name="confirm_password" type="password" placeholder="Confirme contraseña">
->>>>>>> Stashed changes
       <input type="submit" value="Enviar">
     </form>
 
