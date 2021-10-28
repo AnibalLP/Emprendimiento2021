@@ -243,8 +243,6 @@ display: grid;
 grid-template-rows: repeat(auto);
 background-color: khaki;
 }
-<<<<<<< Updated upstream
-=======
 
 .contain{
   display: grid;
@@ -260,4 +258,3 @@ background-color: khaki;
 .container-row{
 display: grid;
 }
->>>>>>> Stashed changes

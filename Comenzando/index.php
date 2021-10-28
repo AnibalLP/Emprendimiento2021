@@ -22,55 +22,34 @@
   <head>
     <meta charset="utf-8">
     <title>Bienvenido</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0" >
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
   </head>
   <body>
-
-  <?php require 'partials/header1.php'?>
-
-   
+    <div class="container-fluid"> 
+    <?php require 'partials/header1.php'?>   
     <?php if(!empty($user)): ?>
-      <br> <a class="texto">Bienvenid@ <?= $user['usuario']; ?>
-      te has logeado!</a> 
+      <a class="text-center fs-3">Bienvenid@ <?= $user['usuario']; ?></a> 
     <?php else: ?>
-      <h1>UNETE POR UN MUNDO MEJOR!!</h1>
-
+      <h1 class="text-center fs-3">UNETE POR UN MUNDO MEJOR!!</h1>
       <button><a href="login.php">Inicia Sesion</a></button> o
       <button><a href="signup.php">Registrate</a></button>
     <?php endif; ?>
 
-<div class="contenedor">
-<div class="contenedor-cuerpo">
-           <div class="titulo">Vision</div> 
-                <p>Somos un equipo con capacidad de creación de software,contamos con los conocimientos
-                necesarios para elaborarlos trabajos de una forma correcta mediante con todas las 
-                metodologías del manifiesto ágil.</p> 
     </div>
-    
-    
-    <div class="contenedor-cuerpo">
-            <div class="titulo">Mision</div> 
-            <div class="contenido">
-                <p>Ser un equipo que cuente con los conocimientos necesarios a la hora de desarrollar software.</p>    
-            </div>
-        
-    </div>
-    <div class="anuncios">
-    <h5>
-        Videos recomendados
-    </h5>
-    </div>
-    
+
+  <div class="container-fluid">
+  <img src="../Comenzando/images/13.jpg" class="img-fluid"  alt="...">
+  <div class="card-body">
+    <p class="text-center fs-3">Cuida Nuestro planeta, educa, fomenta, y aprende de que manera puedes salvar el planeta, apoya, por un medio ambiente sano!...</p>
+  </div>
 </div>
 
-    
-  
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
-  integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 
-  crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   </body>
 </html>
