@@ -27,6 +27,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
+
   </head>
   <body>
     <div class="container-fluid"> 
@@ -34,21 +35,41 @@
     <?php if(!empty($user)): ?>
       <a class="text-center fs-3">Bienvenid@ <?= $user['usuario']; ?></a> 
     <?php else: ?>
-      <h1 class="text-center fs-3">UNETE POR UN MUNDO MEJOR!!</h1>
-      <button><a href="login.php">Inicia Sesion</a></button> o
-      <button><a href="signup.php">Registrate</a></button>
+      <h1 class="text-center fs-3">UNETE POR UN MUNDO MEJOR!!</h1>      
+        <div class="container">
+          <div class="m-4 d-flex justify-content-center align-items-center">
+          <button type="button" class="btn btn-outline-primary" onclick="IniciarSesion();">Iniciar Sesión</button>&nbsp;&nbsp; ó &nbsp;&nbsp; <!--El código:  &nbsp;&nbsp;--><!--Sirve para hacer un espacio entre lineas-->
+          <button type="button" class="btn btn-outline-info" onclick="Registrarse();">Registrarse</button>
+          </div>
+        </div>           
     <?php endif; ?>
 
     </div>
-
+    <br>
+    <br>
+    <!--Inicio carrusel-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../Comenzando/images/13.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../Comenzando/images/20.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../Comenzando/images/5.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+    <!--Fin carrusel-->
   <div class="container-fluid">
-  <img src="../Comenzando/images/13.jpg" class="img-fluid"  alt="...">
+  
   <div class="card-body">
-    <p class="text-center fs-3">Cuida Nuestro planeta, educa, fomenta, y aprende de que manera puedes salvar el planeta, apoya, por un medio ambiente sano!...</p>
+  <p class="text-center fs-3">Cuida Nuestro planeta, educa, fomenta, y aprende de que manera puedes salvar el planeta, apoya, por un medio ambiente sano!...</p>
   </div>
 </div>
 
-
+<script src="JS/Funciones.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   </body>
