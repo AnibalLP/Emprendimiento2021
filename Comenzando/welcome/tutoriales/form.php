@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Reused Plastic</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
      <?php  
         include("../../database.php");
      
@@ -60,9 +60,9 @@
     <body>
     <?php require '../../partials/header2.php' ?>
   
-<main role="main" class="flex-shrink-0">
+<main role="main" class="flex-shrink-0 m-5">
 
-<div class="contain">
+<div class="container ">
   <?php
   if(isset($error)){
 	echo '<div class="alert alert-danger" role="alert"> '.$error.'</div>';
@@ -70,25 +70,22 @@
   ?>
   <?php
   if(isset($_GET["estado"])){
-	/*echo '<div class="alert alert-success" role="alert"> Video subido correctamente</div>';*/
+	/*echo '<div class="alert alert-success" role="alert">Video subido correctamente</div>';*/
 	}
   ?>  
     <div class="row">
-    
     <form method="post" action="" enctype='multipart/form-data'>
           <div class="form-grop">
-            <label for="exampleInputEmail1">Subir Video</label>
-            <input name="nombre" type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese nombre">
+            <label class="">Titulo de video</label>
+            <input name="nombre" type="text" class="form-control p-3 m-3" placeholder="Ingrese un titulo">
           </div>
           <div class="form-group">
           
 
-<div class="custom">
-  <input name="file_video" type="file" class="custom-file-input" id="customFile" required>
-  <label class="custom" for="customFile"></label>
+<div class="row">
+  <input name="file_video" type="file" class="custom-file-input mb-5" id="customFile" required>
 </div>
 <script>
-
 $(".custom-file-input").on("change", function() {
   var fileName = $(this).val().split("\\").pop();
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
@@ -96,30 +93,19 @@ $(".custom-file-input").on("change", function() {
 </script>
           </div>
           <button type="submit" class="btn btn-primary" name='video_upload'>Subir Video</button>
+          
 	</form>
+ </div>
+ </div>
 
- </div>
- </div>
  </main>
 
- <div class="container">
-    <div class="row">
+
      <?php
-    $query = $conn->prepare("SELECT * FROM videos ORDER BY nombre DESC");
+    $query = $conn->prepare("SELECT * FROM videos");
     $query->execute();
-    $data = $query->fetchAll();
-        foreach ($data as $row):
-            $idu=$row['id_user']; 
-            $nombre=$row['nombre'];
-            $ubicacion = $row['ubicacion'];
-            echo "<div'>";
-            echo "<h3>$nombre</h3>";
-            echo "<video src='videos/".$ubicacion."' controls width='250px' height='250px' >";
-            echo "</div>";
-        endforeach;
+  $conn;
         ?>    
-</div>
- </div>
  
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>    <!-- Bootstrap CSS -->
