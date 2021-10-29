@@ -49,13 +49,13 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../Comenzando/images/13.jpg" class="d-block w-100" alt="...">
+      <img src="../Comenzando/images/13.jpg" class="d-block w-100" alt="..." width="450" height="450">
     </div>
     <div class="carousel-item">
-      <img src="../Comenzando/images/20.jpg" class="d-block w-100" alt="...">
+      <img src="../Comenzando/images/20.jpg" class="d-block w-100" alt="..." width="450" height="450">
     </div>
     <div class="carousel-item">
-      <img src="../Comenzando/images/5.jpg" class="d-block w-100" alt="...">
+      <img src="../Comenzando/images/5.jpg" class="d-block w-100" alt="..." width="450" height="450">
     </div>
   </div>
 </div>
