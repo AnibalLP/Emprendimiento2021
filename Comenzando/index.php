@@ -26,8 +26,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-
   </head>
   <body>
     <div class="container-fluid"> 
@@ -68,6 +66,48 @@
   <p class="text-center fs-3">Cuida Nuestro planeta, educa, fomenta, y aprende de que manera puedes salvar el planeta, apoya, por un medio ambiente sano!...</p>
   </div>
 </div>
+
+<!--FOOTER O PIE DE PÁGINA-->
+<footer class="bg-dark text-white">
+  <div class="container">
+    <nav class="row">
+      <!--LOGO-->
+      <!--menu 1-->
+      <ul class="col-3 list-unstyled"> <!--Esta clase quita las viñetas a los elementos li-->
+        <li class="font-weight-bold text-uppercase">Resourse</li>
+        <li><a href="#" class="text-reset">Link 1</a></li>
+        <li><a href="#" class="text-reset">Link 2</a></li>
+        <li><a href="#" class="text-reset">Link 3</a></li>
+        <li><a href="#" class="text-reset">Link 4</a></li>
+      </ul>
+      <!--menu 2-->
+      <ul class="col-3 list-unstyled"> <!--Esta clase quita las viñetas a los elementos li-->
+        <li class="font-weight-bold text-uppercase">Quick links</li>
+        <li><a href="#" class="text-reset">Link 1</a></li>
+        <li><a href="#" class="text-reset">Link 2</a></li>
+        <li><a href="#" class="text-reset">Link 3</a></li>
+        <li><a href="#" class="text-reset">Link 4</a></li>
+      </ul>
+      <!--redes sociales-->
+      <ul class="col-3 list-unstyled"> <!--Esta clase quita las viñetas a los elementos li-->
+        <li class="font-weight-bold text-uppercase">Quick links</li>
+        <li>
+          <!--Facebook-->
+          <a href="#" class="text-reset">Link 1</a>
+          <!--Twitter-->
+          <a href="#" class="text-reset">Link 1</a>
+          <!--Instagram-->
+          <a href="#" class="text-reset">Link 1</a>
+          <!--Youtube-->
+          <a href="#" class="text-reset">Link 1</a>
+        </li>
+      </ul>
+      <!--marca registrada-->
+      &copy;
+    </nav>
+  </div>
+</footer>
+<!--FIN DEL FOOTER O PIE DE PÁGINA-->
 
 <script src="JS/Funciones.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
