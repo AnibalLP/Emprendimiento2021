@@ -24,7 +24,7 @@
                         </li>
                       </ul>
                       
-                      <button class="btn btn-outline-primary " type="button"><a class="text-decoration-none fs-4"  href="logout.php">Cerrar Sesion</a></button>
+                      <button class="btn btn-outline-primary" style="background-color: #61FF80" type="button"><a class="text-decoration-none fs-4 text-dark"  href="logout.php">Cerrar Sesion</a></button>
                       ';}?>
       
     </div>
