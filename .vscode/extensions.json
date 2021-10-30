@@ -1,6 +1,8 @@
 {
     "recommendations": [
         "hansuxdev.bootstrap5-snippets",
-        "swumplurd.bootstrap-5-snippets-extension"
+        "swumplurd.bootstrap-5-snippets-extension",
+        "bhavanay.bootstrap-snippets-vscode",
+        "ayalma.responsive"
     ]
 }

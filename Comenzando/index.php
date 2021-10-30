@@ -25,17 +25,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   </head>
   <body>
     <div class="container-fluid"> 
     <?php require 'partials/header1.php'?>   
     <?php if(!empty($user)): ?>
-      <a class="text-center fs-3">Bienvenid@ <?= $user['usuario']; ?></a> 
+      <a class="text-decoration-none d-flex fs-2 justify-content-center" style="color: black">Bienvenid@ <?= $user['usuario']; ?></a> 
     <?php else: ?>
-      <h1 class="text-center fs-3">UNETE POR UN MUNDO MEJOR!!</h1>      
+      <h1 class="text-center fs-3 m-2">UNETE POR UN MUNDO MEJOR!!</h1>      
         <div class="container">
-          <div class="m-4 d-flex justify-content-center align-items-center">
+          <div class="m-2 d-flex justify-content-center align-items-center">
           <button type="button" class="btn btn-outline-primary" onclick="IniciarSesion();">Iniciar Sesión</button>&nbsp;&nbsp; ó &nbsp;&nbsp; <!--El código:  &nbsp;&nbsp;--><!--Sirve para hacer un espacio entre lineas-->
           <button type="button" class="btn btn-outline-info" onclick="Registrarse();">Registrarse</button>
           </div>
@@ -45,59 +44,65 @@
     </div>
     <br>
     <br>
+    <div class="d-flex m-5">
     <!--Inicio carrusel-->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../Comenzando/images/13.jpg" class="d-block w-100" alt="..." width="450" height="450">
+      <img src="../Comenzando/images/13.jpg" class="rounded-3 rounded-sm" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="../Comenzando/images/20.jpg" class="d-block w-100" alt="..." width="450" height="450">
+      <img src="../Comenzando/images/7.jpg" class="rounded-3 rounded-sm" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="../Comenzando/images/5.jpg" class="d-block w-100" alt="..." width="450" height="450">
+      <img src="../Comenzando/images/31.jpg" class="rounded-3 rounded-sm" alt="...">
     </div>
   </div>
 </div>
     <!--Fin carrusel-->
   <div class="container-fluid">
-  
   <div class="card-body">
-  <p class="text-center fs-3">Cuida Nuestro planeta, educa, fomenta, y aprende de que manera puedes salvar el planeta, apoya, por un medio ambiente sano!...</p>
+  <p class="text-center m-1 fs-1 justify-content-start mt-4">Cuida Nuestro planeta, educa, fomenta, y aprende de que manera puedes salvar el planeta, apoya, por un medio ambiente sano!...</p>
   </div>
 </div>
+</div>
+
+<div class="d-flex m-1">
+
+<div class="container-fluid">
+  <div class="card-body">
+  <p class="text-center m-1 fs-1 justify-content-start mt-4">Cuida Nuestro planeta, educa, fomenta, y aprende de que manera puedes salvar el planeta, apoya, por un medio ambiente sano!...</p>
+  </div>
+</div>
+    <!--Inicio carrusel-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../Comenzando/images/32.jpg" class="rounded-3 rounded-sm" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../Comenzando/images/33.jpg" class="rounded-3 rounded-sm" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../Comenzando/images/34.jpg" class="rounded-3 rounded-sm" alt="...">
+    </div>
+  </div>
+</div>
+    <!--Fin carrusel-->
+</div>
+
 
 <!--FOOTER O PIE DE PÁGINA-->
-<footer  style="background-color: #2e95c7">
+<footer class="mt-5" style="background-color: #61FF80">
   <div class="container">
     <nav class="row">
       <!--LOGO-->
-      <!--menu 1-->
-      <ul class="col-3 list-unstyled"> <!--Esta clase quita las viñetas a los elementos li-->
-        <li class="font-weight-bold text-uppercase">Resourse</li>
-        <li><a href="#" class="text-reset">Link 1</a></li>
-        <li><a href="#" class="text-reset">Link 2</a></li>
-        <li><a href="#" class="text-reset">Link 3</a></li>
-        <li><a href="#" class="text-reset">Link 4</a></li>
-      </ul>
-      <!--menu 2-->
-      <ul class="col-3 list-unstyled"> <!--Esta clase quita las viñetas a los elementos li-->
-        <li class="font-weight-bold text-uppercase">Quick links</li>
-        <li><a href="#" class="text-reset">Link 1</a></li>
-        <li><a href="#" class="text-reset">Link 2</a></li>
-        <li><a href="#" class="text-reset">Link 3</a></li>
-        <li><a href="#" class="text-reset">Link 4</a></li>
-      </ul>
+    
+      
       <!--redes sociales-->
       <ul class="col-3 list-unstyled"> <!--Esta clase quita las viñetas a los elementos li-->
         <li class="font-weight-bold text-uppercase">Quick links</li>
           <li>
-            <!--Facebook-->
-            <a href="#" class="text-reset">Link 1</a>
-            <!--Twitter-->
-            <a href="#" class="text-reset">Link 1</a>
-            <!--Instagram-->
-            <a href="#" class="text-reset">Link 1</a>
             <!--Youtube-->
             <a href="#" class="text-reset">Link 1</a>
           </li>
@@ -106,7 +111,7 @@
       <div class="container">
           <div class="m-4 d-flex justify-content-center align-items-center">
           <!--Simbolo copyrigth    Espacio entre lineas   Simbolo marca registrada-->
-          Copyright &copy;         &nbsp;&nbsp;           &reg; Todos los derechos reservados 2021
+          Copyright &copy;  Reused Plastic       &nbsp;&nbsp;           &reg; Todos los derechos reservados 2021
           </div>
         </div>        
     </nav>

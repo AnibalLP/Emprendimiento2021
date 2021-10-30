@@ -1,12 +1,12 @@
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/Emprendimiento2021/Comenzando/">Reused Plastic</a>
+<nav class="navbar navbar-expand-lg m-1 navbar-light bg-light">
+  <div class="container-fluid fs-2">
+    <a class="text-decoration-none fw-bold fs-1 w-25 " style="color:black" href="/Emprendimiento2021/Comenzando/">Reused Plastic</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto m-2 mb-lg-0 text-dark">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="">Inicio</a>
         </li>
@@ -24,7 +24,7 @@
                         </li>
                       </ul>
                       
-                      <button class="btn btn-light" type="button"><a  href="logout.php">Cerrar Sesion</a></button>
+                      <button class="btn btn-outline-primary " type="button"><a class="text-decoration-none fs-4"  href="logout.php">Cerrar Sesion</a></button>
                       ';}?>
       
     </div>

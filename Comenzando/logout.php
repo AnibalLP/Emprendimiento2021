@@ -5,5 +5,5 @@
 
   session_destroy();
 
-  header('Location: /Emprendimiento2021/Comenzando/login.php');
+  header('Location: /Emprendimiento2021/Comenzando/index.php');
 ?>

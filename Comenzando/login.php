@@ -30,7 +30,7 @@
     <meta charset="utf-8">
     <title>Login</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
   <body>
     <?php require 'partials/header0.php' ?>
@@ -39,14 +39,25 @@
       <p> <?= $message ?></p>
     <?php endif; ?>
 
-    <h1>Inicio de sesión</h1>
-    <form action="login.php" method="POST">
-    <input name="usuario" type="text" placeholder="Ingrese su nombre">
-      <input name="email" type="text" placeholder="Ingrese su email">
-      <input name="passwrd" type="password" placeholder="Ingrese su contraseña">
-      <input type="submit" value="Acceder">
+    <div class="d-flex justify-content-center rounded-3 rounded-lg">
+    <form class="" action="login.php" method="POST">
+
+      <input class="row justify-content-center m-3" name="usuario" type="text" placeholder="Ingrese su nombre">
+      <input class="row justify-content-center m-3" name="email" type="text" placeholder="Ingrese su email">
+      <input class="row justify-content-center m-3" name="passwrd" type="password" placeholder="Ingrese su contraseña">
+      <div class="d-flex justify-content-center m-3">
+    <input class="d-flex btn btn-primary" style="background-color:#059228" type="submit" value="Acceder">
+    </div>
     </form>
-    <button class="botones" ><a class="botones-RL" href="signup.php">Registrate</a></button>
-    
+    </div>
+
+   
+
+    <div class="d-flex justify-content-center m-3">
+      <button class="btn btn-primary m-2" style="background-color:#059228"  ><a class="text-decoration-none text-light fs-4"  href="signup.php">Registrate</a></button>  
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </body>
 </html>
