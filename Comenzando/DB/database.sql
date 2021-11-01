@@ -50,7 +50,7 @@ INSERT INTO `users` (`id`, `email`, `passwrd`) VALUES
 --
 
 CREATE TABLE `videos` (
-  `id` int(11) NOT NULL,
+  `idVideos` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `ubicacion` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

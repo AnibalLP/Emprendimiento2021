@@ -107,7 +107,7 @@ $(".custom-file-input").on("change", function() {
     $query->execute();
     $data = $query->fetchAll();
         foreach ($data as $row):
-            $idu=$row['id_user']; 
+            $idu=$row['idVideos']; 
             $nombre=$row['nombre'];
             $ubicacion = $row['ubicacion'];
             echo "<div class='row m-3'>";
