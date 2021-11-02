@@ -3,6 +3,9 @@
         "hansuxdev.bootstrap5-snippets",
         "swumplurd.bootstrap-5-snippets-extension",
         "bhavanay.bootstrap-snippets-vscode",
-        "ayalma.responsive"
+        "ayalma.responsive",
+        "sophisticode.php-formatter",
+        "lonefy.vscode-js-css-html-formatter",
+        "anbuselvanrocky.bootstrap5-vscode"
     ]
 }

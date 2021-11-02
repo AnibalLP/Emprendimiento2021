@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2021 a las 07:00:20
+-- Tiempo de generación: 02-11-2021 a las 07:42:59
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -24,24 +24,53 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `foro`
+--
+
+CREATE TABLE `foro` (
+  `userforo` int(11) NOT NULL,
+  `sms` varchar(400) NOT NULL,
+  `reaccion` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `foro`
+--
+
+INSERT INTO `foro` (`userforo`, `sms`, `reaccion`) VALUES
+(6, 'HOLA AMIGO', 'NO SE');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mensajes`
+--
+
+CREATE TABLE `mensajes` (
+  `id_user` int(11) NOT NULL,
+  `msj` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `users`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `passwrd` varchar(200) NOT NULL
+  `usuario` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `email` varchar(200) CHARACTER SET utf8 NOT NULL,
+  `passwrd` varchar(200) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `passwrd`) VALUES
-(1, 'frpsnow21@gmail.com', '$2y$10$tShByTADOWAb818k8Ux.ueNOjwb6UAqu.x0.VqsjtFD8lHGY0aeX.'),
-(2, 'prueba', '$2y$10$SXtDx.5JjOd4COA3iwQdIOb9DCk0t7PYyokwFicHWm41e4XnbRMvO'),
-(4, 'hola', '$2y$10$GZqT53HydQlLtWSW.iqg6ef7EizxaujyoamIM16RpIWVlAbzF/Fd.'),
-(5, 'rubidia', '$2y$10$yg2pqH9RfnCHzkE2FKmMleE8hpbnfuWgYi/emGUWeakqMTO4C4gDO');
+INSERT INTO `users` (`id`, `usuario`, `email`, `passwrd`) VALUES
+(6, 'anibal', 'frp.com', '$2y$10$xb.U4KdDBtYT3keYVNlOxuFyQcqshSYtrYV9ro0uT0QSes6ze7FQi'),
+(7, 'rubidia', 'rubi.com', '$2y$10$ttkpkfzNhTe0q5Ku3qWmVu49U5dTfNGz2jP8JPP1HhbqQtCjOcmeS');
 
 -- --------------------------------------------------------
 
@@ -50,7 +79,7 @@ INSERT INTO `users` (`id`, `email`, `passwrd`) VALUES
 --
 
 CREATE TABLE `videos` (
-  `idVideos` int(11) NOT NULL,
+  `id_user` int(11) DEFAULT NULL,
   `nombre` varchar(255) NOT NULL,
   `ubicacion` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -59,28 +88,78 @@ CREATE TABLE `videos` (
 -- Volcado de datos para la tabla `videos`
 --
 
-INSERT INTO `videos` (`id`, `nombre`, `ubicacion`) VALUES
-(0, 'primer', 'prueba-309.mp4');
+INSERT INTO `videos` (`id_user`, `nombre`, `ubicacion`) VALUES
+(NULL, 'primero', 'presente--949.mp4'),
+(NULL, 'segundo', 'sin-papel-143.mp4'),
+(NULL, '', 'sin-papel-119.mp4'),
+(NULL, '', 'presente--47.mp4');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
+-- Indices de la tabla `foro`
+--
+ALTER TABLE `foro`
+  ADD KEY `userforo` (`userforo`);
+
+--
+-- Indices de la tabla `mensajes`
+--
+ALTER TABLE `mensajes`
+  ADD KEY `msjuser` (`id_user`);
+
+--
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `usuario` (`usuario`);
+
+--
+-- Indices de la tabla `videos`
+--
+ALTER TABLE `videos`
+  ADD UNIQUE KEY `id_user` (`id_user`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
+-- AUTO_INCREMENT de la tabla `mensajes`
+--
+ALTER TABLE `mensajes`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `foro`
+--
+ALTER TABLE `foro`
+  ADD CONSTRAINT `foro_ibfk_1` FOREIGN KEY (`userforo`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `mensajes`
+--
+ALTER TABLE `mensajes`
+  ADD CONSTRAINT `usermsj` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `videos`
+--
+ALTER TABLE `videos`
+  ADD CONSTRAINT `videos_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
