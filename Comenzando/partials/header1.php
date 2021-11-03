@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto m-2 mb-lg-0 text-dark">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
         </li>
         <?php
                       if (isset($_SESSION['user_id'])) {

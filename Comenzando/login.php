@@ -33,15 +33,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
   <body>
-    <?php require 'partials/header0.php' ?>
+    <?php require 'partials/header1.php' ?>
 
     <?php if(!empty($message)): ?>
       <p> <?= $message ?></p>
     <?php endif; ?>
-
+    <h1 class="d-flex justify-content-center aling-center m-5">Inicio de sesión</h1>
     <div class="d-flex justify-content-center rounded-3 rounded-lg">
     <form class="" action="login.php" method="POST">
-
       <input class="row justify-content-center m-3" name="usuario" type="text" placeholder="Ingrese su nombre">
       <input class="row justify-content-center m-3" name="email" type="text" placeholder="Ingrese su email">
       <input class="row justify-content-center m-3" name="passwrd" type="password" placeholder="Ingrese su contraseña">

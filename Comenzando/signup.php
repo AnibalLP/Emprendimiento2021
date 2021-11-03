@@ -25,6 +25,8 @@
     <meta charset="utf-8">
     <title>Registro</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
 </head>
   <body>
@@ -35,15 +37,19 @@
       <p> <?= $message ?></p>
     <?php endif; ?>
 
-    <h1>Registro</h1>
+    <h1 class="d-flex justify-content-center aling-center m-5">Registro</h1>
+    <div class="d-flex justify-content-center rounded-3 rounded-lg">
     <form action="signup.php" method="POST">
-    <input name="usuario" type="text" placeholder="Ingrese su nombre">
-      <input name="email" type="text" placeholder="Ingrese su email">
-      <input name="password" type="password" placeholder="Igrese una contraseña">
-      <input name="confirm_password" type="password" placeholder="Confirme contraseña">
-      <input type="submit" value="Enviar">
+      <input class="row justify-content-center m-3" name="usuario" type="text" placeholder="Ingrese su nombre">
+      <input class="row justify-content-center m-3" name="email" type="text" placeholder="Ingrese su email">
+      <input class="row justify-content-center m-3" name="password" type="password" placeholder="Ingrese una contraseña">
+      <input class="row justify-content-center m-3" name="confirm_password" type="password" placeholder="Confirme contraseña">
+      <input class="col-md-10 justify-content-center m-3"  type="submit" value="Enviar">
     </form>
-    <button class="botones" ><a class="botones-RL" href="login.php">Iniciar Sesion</a></button> 
-
+    
+    </div>
+    <div class="d-flex justify-content-center m-3">
+    <button class="btn btn-primary m-2" style="background-color:#059228" ><a class="text-decoration-none text-light fs-4" href="login.php">Iniciar Sesion</a></button>  
+    </div>
   </body>
 </html>
