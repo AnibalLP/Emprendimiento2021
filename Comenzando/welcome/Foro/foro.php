@@ -2,14 +2,14 @@
 
   require '../../database.php';
 
-    $sql = "INSERT INTO foro (sms,reaccion) VALUES ( :sms, :reaccion)";
+    $sql = "INSERT INTO mensajes (id,id_user,msj) VALUES (:id,:id_user,:msj)";
     $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':sms', $_POST['sms']);
-    $stmt->bindParam(':reaccion', $POST['reaccion']);
-	$escribio=null;
+    $stmt->bindParam(':id', $_POST['id']);
+    $stmt->bindParam(':id_user', $_POST['id_user']);
+    $stmt->bindParam(':msj', $_POST['msj']);
+    $stmt->execute();
 
-
-	
+    $vista=$_POST['msj'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -32,27 +32,32 @@
         <div class="container">
             <!-- Content here -->
             <div class="d-flex bg-primary m-5">
-            <?php    
-			
-			?>
+
+                <?php
+                
+                foreach($mensajes as $vista)
+                {
+                   echo '<a>' .$vista. '</a>';
+                }
+                ?>
+
             </div>
         </div>
 
         <div class="container">
 
-            <form method="POST">
+            <form action="foro.php" method="POST">
                 <div class="form-group">
-					<input name="sms" type="text" class="form-control"  placeholder="Escribe tu mensaje">
-					<input name="reaccion" type="text" class="form-control"  placeholder="Escribe tu mensaje">
-					<input type="submit" value="Enviar">
-				</div>
+                    <input name="msj" type="text" class="form-control" placeholder="Escribe tu mensaje">
+                    <input type="submit" value="Enviar">
+                </div>
             </form>
 
         </div>
     </div>
 
-	<?php if(!empty($mensaje)): ?>
-      <p> <?= $mensaje ?></p>
+    <?php if(!empty($mensaje)): ?>
+    <p> <?= $mensaje ?></p>
     <?php endif; ?>
 
 </body>
