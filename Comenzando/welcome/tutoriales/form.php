@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es" class="h-100">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Reused Plastic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-     <?php  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <?php  
         include("../../database.php");
      
         if(isset($_POST['video_upload'])){
@@ -56,53 +58,55 @@
         
         }
         ?>
-    </head>
-    <body>
-    <?php require '../../partials/header2.php' ?>
-  
-<main role="main" class="flex-shrink-0 m-5">
+</head>
 
-<div class="container ">
-  <?php
+<body>
+    <?php require '../../partials/header2.php' ?>
+
+    <main role="main" class="flex-shrink-0 m-5">
+
+        <div class="container ">
+            <?php
   if(isset($error)){
 	echo '<div class="alert alert-danger" role="alert"> '.$error.'</div>';
 	}
   ?>
-  <?php
+            <?php
   if(isset($_GET["estado"])){
 	/*echo '<div class="alert alert-success" role="alert">Video subido correctamente</div>';*/
 	}
-  ?>  
-    <div class="row">
-    <form method="post" action="" enctype='multipart/form-data'>
-          <div class="form-grop">
-            <label class="">Titulo de video</label>
-            <input name="nombre" type="text" class="form-control p-3 m-3" placeholder="Ingrese un titulo">
-          </div>
-          <div class="form-group">
-          
+  ?>
+            <div class="row">
+                <form method="post" action="" enctype='multipart/form-data'>
+                    <div class="form-grop">
+                        <label class="">Titulo de video</label>
+                        <input name="nombre" type="text" class="form-control p-3 m-3" placeholder="Ingrese un titulo">
+                    </div>
+                    <div class="form-group">
 
-<div class="row">
-  <input name="file_video" type="file" class="custom-file-input mb-5" id="customFile" required>
-</div>
-<script>
-$(".custom-file-input").on("change", function() {
-  var fileName = $(this).val().split("\\").pop();
-  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-});
-</script>
-          </div>
-          <button type="submit" class="btn btn-primary" name='video_upload'>Subir Video</button>
-          
-	</form>
- </div>
- </div>
 
- </main>
+                        <div class="row">
+                            <input name="file_video" type="file" class="custom-file-input mb-5" id="customFile"
+                                required>
+                        </div>
+                        <script>
+                        $(".custom-file-input").on("change", function() {
+                            var fileName = $(this).val().split("\\").pop();
+                            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                        });
+                        </script>
+                    </div>
+                    <button type="submit" class="btn btn-primary" name='video_upload'>Subir Video</button>
 
- <div class="container">
-    <div class="d-flex">
-     <?php
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="container">
+        <div class="d-flex">
+            <?php
     $query = $conn->prepare("SELECT * FROM videos ORDER BY nombre DESC");
     $query->execute();
     $data = $query->fetchAll();
@@ -114,11 +118,20 @@ $(".custom-file-input").on("change", function() {
             echo "<video class='col' src='videos/".$ubicacion."' controls width='250px' height='250px'>";
             echo "</div>";
         endforeach;
-        ?>    
- </div>
-</div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>    <!-- Bootstrap CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </body>
+        ?>
+        </div>
+    </div>
+    <?php include("../../partials/footer.php") ?>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script> <!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <?php include("../partials/footer.php") ?>
+</body>
+
 </html>

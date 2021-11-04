@@ -59,7 +59,7 @@
     <?php if(!empty($mensaje)): ?>
     <p> <?= $mensaje ?></p>
     <?php endif; ?>
-
+    <?php include("../../partials/footer.php") ?>
 </body>
 
 </html>

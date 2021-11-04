@@ -21,35 +21,41 @@
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Registro</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
+
 </head>
-  <body>
-  <?php require 'partials/header1.php' ?>
-   
+
+<body>
+    <?php require 'partials/header1.php' ?>
+
 
     <?php if(!empty($message)): ?>
-      <p> <?= $message ?></p>
+    <p> <?= $message ?></p>
     <?php endif; ?>
 
     <h1 class="d-flex justify-content-center aling-center m-5">Registro</h1>
     <div class="d-flex justify-content-center rounded-3 rounded-lg">
-    <form action="signup.php" method="POST">
-      <input class="row justify-content-center m-3" name="usuario" type="text" placeholder="Ingrese su nombre">
-      <input class="row justify-content-center m-3" name="email" type="text" placeholder="Ingrese su email">
-      <input class="row justify-content-center m-3" name="password" type="password" placeholder="Ingrese una contraseña">
-      <input class="row justify-content-center m-3" name="confirm_password" type="password" placeholder="Confirme contraseña">
-      <input class="col-md-10 justify-content-center m-3"  type="submit" value="Enviar">
-    </form>
-    
+        <form action="signup.php" method="POST">
+            <input class="row justify-content-center m-3" name="usuario" type="text" placeholder="Ingrese su nombre">
+            <input class="row justify-content-center m-3" name="email" type="text" placeholder="Ingrese su email">
+            <input class="row justify-content-center m-3" name="password" type="password"
+                placeholder="Ingrese una contraseña">
+            <input class="row justify-content-center m-3" name="confirm_password" type="password"
+                placeholder="Confirme contraseña">
+            <input class="col-md-10 justify-content-center m-3" type="submit" value="Enviar">
+        </form>
+
     </div>
     <div class="d-flex justify-content-center m-3">
-    <button class="btn btn-primary m-2" style="background-color:#059228" ><a class="text-decoration-none text-light fs-4" href="login.php">Iniciar Sesion</a></button>  
+        <button class="btn btn-primary m-2" style="background-color:#059228"><a
+                class="text-decoration-none text-light fs-4" href="login.php">Iniciar Sesion</a></button>
     </div>
-  </body>
+</body>
+
 </html>
