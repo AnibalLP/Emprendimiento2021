@@ -1,137 +1,146 @@
 <!DOCTYPE html>
 <html lang="es" class="h-100">
 
-<head>
-    <meta charset="utf-8">
-    <title>Reused Plastic</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <?php  
-        include("../../database.php");
-     
-        if(isset($_POST['video_upload'])){
-            //El primer conjunto es en bytes
-            $maxsize = 1024242880; // 1GB
-            $nombre_file = $_FILES['file_video']['name'];
-			//
-			$image_info = explode(".", $nombre_file);
-			$nombre =format_uri($image_info[0]);
-			$image_type = end($image_info);
-			$file_video = $nombre."-".rand(10,999).".".$image_type;
-			//
-            $target_dir = "videos/";
-            $target_file = $target_dir.$file_video;
+    <head>
+        <meta charset="utf-8">
+        <title>Reused Plastic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-            // Obtenemos la extension del archivo
-            $videoFileType = strtolower(pathinfo($nombre_file,PATHINFO_EXTENSION));
+    </head>
 
-            // extensiones validados
-            $extensions_arr = array("mp4","avi","3gp","mov","mpeg");
+    <body>
+        <?php require '../../partials/header2.php' ?>
 
-            // Revisar extension
-            if( in_array($videoFileType,$extensions_arr) ){
-                
-                // Revisar el tamaÃ±o del archivo
-                if(($_FILES['file_video']['size'] >= $maxsize) || ($_FILES["file_video"]["size"] == 0)) {
-                    $error= "Archivo demasiado grande. El archivo debe ser menor que 5MB.";
-                }else{
-                    // Subir
-                    if(move_uploaded_file($_FILES['file_video']['tmp_name'],$target_file)){
-                        // Insertar registro
-						$nombre = htmlentities($_POST['nombre']);
-						$query = $conn->prepare("INSERT INTO `videos`(`id_user`,`nombre`, `ubicacion`)
-						VALUES (:id_user,:nombre,:ubicacion)");
-						$query->bindParam(":id_user", $idu);            
-						$query->bindParam(":nombre", $nombre);
-						$query->bindParam(":ubicacion", $file_video);
-						$query->execute();
-						    if($query->rowCount() > 0){
-								header("location:form.php?estado=ok");
-							}
-                    }
-                }
-
-            }else{
-                $error= "la extension del archivo es invalido. Las extensiones permitidas son: mp4, avi, 3gp, mov, mpeg";
-            }
-        
-        }
+<!--INICIO DEL LINK DEL ARCHIVO QUE PERMITE MOSTRAR EL ÚLTIMO VIDEO-->
+        <?php
+        require 'muestraelultimovideo.php'
         ?>
-</head>
-
-<body>
-    <?php require '../../partials/header2.php' ?>
-
-    <main role="main" class="flex-shrink-0 m-5">
-
-        <div class="container ">
-            <?php
-  if(isset($error)){
-	echo '<div class="alert alert-danger" role="alert"> '.$error.'</div>';
-	}
-  ?>
-            <?php
-  if(isset($_GET["estado"])){
-	/*echo '<div class="alert alert-success" role="alert">Video subido correctamente</div>';*/
-	}
-  ?>
-            <div class="row">
-                <form method="post" action="" enctype='multipart/form-data'>
-                    <div class="form-grop">
-                        <label class="">Titulo de video</label>
-                        <input name="nombre" type="text" class="form-control p-3 m-3" placeholder="Ingrese un titulo">
-                    </div>
-                    <div class="form-group">
+<!--FIN DEL LINK DEL ARCHIVO QUE PERMITE MOSTRAR EL ÚLTIMO VIDEO-->
 
 
-                        <div class="row">
-                            <input name="file_video" type="file" class="custom-file-input mb-5" id="customFile"
-                                required>
-                        </div>
-                        <script>
-                        $(".custom-file-input").on("change", function() {
-                            var fileName = $(this).val().split("\\").pop();
-                            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-                        });
-                        </script>
-                    </div>
-                    <button type="submit" class="btn btn-primary" name='video_upload'>Subir Video</button>
+<!--INCIO DEL CÓDIGO PARA MOSTRAR EL ÚLTIMO VIDEO SUBIDO-->
+        <div class="row text-center">
+        <div class="col-6">
+            <h3>LO MÁS RECIENTE</h3>
+          <?php 
+          if( $totalVideo >0){ ?>
+          <h2><?php echo $DataVideo['nombreVideo']; ?></h2>
 
-                </form>
-            </div>
+          <div class="video-responsive">
+            <iframe src="<?php echo $DataVideo['urlVideo']; ?>"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+          </div>
+        <?php }else{ ?>
+        <h2>No hay Video</h2>
+        <?php } ?>
+
         </div>
 
-    </main>
-
-    <div class="container">
-        <div class="d-flex">
-            <?php
-    $query = $conn->prepare("SELECT * FROM videos ORDER BY nombre DESC");
-    $query->execute();
-    $data = $query->fetchAll();
-        foreach ($data as $row):
-            $idu=$row['idVideos']; 
-            $nombre=$row['nombre'];
-            $ubicacion = $row['ubicacion'];
-            echo "<div class='row m-3'>";
-            echo "<video class='col' src='videos/".$ubicacion."' controls width='250px' height='250px'>";
-            echo "</div>";
-        endforeach;
-        ?>
+        <div class="col-6 text-center">
+          <img  class="img-fluid" src="../../images/work.gif" alt="">
         </div>
+      </div>
+<!--FIN DEL CÓDIGO QUE MUESTRA EL ÚLTIMO VIDEO SUBIDO-->
+
+
+<!--INICIO DEL CÓDIGO QUE AGREGA EL LINK DE LOS VIDEOS DE YOUTUBE-->
+<div class="container mt-5 pd-5">
+    <h2 class="text-center">Registrar Video en Reused Plastic</h2>
+    <hr>
+
+    <form action="recibVideoYoutube.php" method="post">
+    <div class="form-group">
+      <label for="nombreVideo">Nombre del Video</label>
+      <input type="text" name="nombreVideo" class="form-control">
     </div>
-    <?php include("../../partials/footer.php") ?>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script> <!-- Bootstrap CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
-    <?php include("../partials/footer.php") ?>
-</body>
+    <div class="form-group">
+      <label for="urlVideo">Pegar URL del Video <em>(Desde Youtube)</em></label>
+      <input type="text" name="urlVideo" class="form-control">
+    </div>
+    <br>
+      <div class="form-group mb-5">
+        <button type="submit" class="btn btn-primary  btn-lg btn-block">Registrar Video</button>
+    </div>
 
+  </form>
+
+
+<br><br>
+<br><br>
+  <?php 
+   require("config.php");
+    $sqlVideo   = ("SELECT * FROM videos ORDER BY id DESC ");
+    $queryVideo = mysqli_query($con, $sqlVideo);
+
+  ?>
+
+<h2 class="text-center mt-5 mb-3">Mis Videos de Youtube</h2>
+  <div class="table-responsive">
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Titulo Video</th>
+          <th class="text-center">Video</th>
+           <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php
+        while ($dataVideo = mysqli_fetch_array($queryVideo)) { ?>
+        <tr>
+          <td><?php  echo $dataVideo['nombreVideo']; ?></td>
+          <td>
+            <iframe width="253" height="200" src="<?php echo $dataVideo['urlVideo']; ?>"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </td>
+          <td>
+            <a href="deleteVideoYoutube.php?idVideo=<?php echo $dataVideo['id']; ?>" class="btn btn-danger" onclick="return confirm('Estás seguro que deseas eliminar el Video?');">Borrar video</a>
+          </td>
+        </tr>
+      <?php } ?>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<!--FIN DEL CÓDIGO QUE AGREGA EL LINK DE LOS VIDEOS DE YOUTUBE-->
+    
+<footer class="mt-5" style="background-color: #61FF80">
+<div class="container">
+            <nav class="row">
+                <!--LOGO-->
+
+
+                <!--redes sociales-->
+                <ul class="col-3 list-unstyled">
+                    <!--Esta clase quita las viñetas a los elementos li-->
+                    <li class="font-weight-bold text-uppercase">Redes Sociales</li>
+                    <li>
+                        <!--Youtube-->
+                        <a href="https://www.youtube.com/channel/UCSGIYTI2AVAUz-ADgJKQh7g"><img src="https://img.icons8.com/ios/50/000000/youtube-play--v1.png"/></a>
+                    </li>
+                </ul>
+                <!--marca registrada-->
+                <div class="container">
+                    <div class="m-4 d-flex justify-content-center align-items-center">
+                        <!--Simbolo copyrigth    Espacio entre lineas   Simbolo marca registrada-->
+                        Copyright &copy; Reused Plastic &nbsp;&nbsp; &reg; Todos los derechos reservados 2021
+                    </div>
+                </div>
+            </nav>
+        </div>
+</footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script> <!-- Bootstrap CSS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+        </script>
+    </body>
 </html>
