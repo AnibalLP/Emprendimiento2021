@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Reused Plastic</title>
+    <title>Reused Plastic | Geolocalización</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
@@ -13,29 +13,37 @@
 <body>
     <?php require '../partials/header3.php' ?>
 
-    <div id="mapa">
-        <h1>Aquí ira EL mapa</h1>
-    </div>
+    <!--INICIO DE LA GEOLOCALIZACIÓN-->
+    <button onclick="findme();">Mostrar ubicación</button>
+    <div id="map"></div>
 
-    <script type="text/javascript">
-    navigator.geolocation.getCurrentPosition(fn_ok, fn_error)
+    <script>
+        function findme(){
+            var output = document.getElementById('map');
+            //Verifica si nuestro navegador soporta geolocalización
+            if (navigator.geolocation){
+                output.innerHTML = "<p>Tu navegador soporta geolocalización</p>";
+            }else{
+                output.innerHTML = "<p>Tu navegador no soporta geolocalización</p>";
+            }
 
-    var divMapa = document.getElementById('mapa');
+            //Obtenemos latitud y longitud
+            function localizacion(posicion){
+                var latitude = posicion.coords.latitude;
+                var longitude = posicion.coords.longitude;
 
-    function fn_mal() {}
+                output.innerHTML = "<p>latitud: "+latitude+"<br>Longitud: "+longitude+"</p>";
+            }
+            
+            function error(){
+                output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
+            }
 
-    function fn_ok(respuesta) {
-
-        var lat = respuesta.coords.latitud;
-        var lon = respuesta.coords.longitude;
-        var coordenada = lat + ',' + lon;
-
-
-
-        divMapa.innerHTML = '<img src="http://maps.googleapis.com/maps/api/staticmap?size=700x400&markers=' +
-            coordenada '" />';
-    }
+            //Le pasamos la localización y el error
+            navigator.geolocation.getCurrentPosition(localizacion, error);
+        }
     </script>
+    <!--FIN DE LA GEOLOCALIZACIÓN-->
 
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYoCJkilVnx876MoAdlUuIef5bY31iBsg&callback=initMap"
