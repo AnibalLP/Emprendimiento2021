@@ -44,10 +44,10 @@
     <h1 class="d-flex justify-content-center aling-center m-5">Inicio de sesión</h1>
     <div class="d-flex justify-content-center rounded-3 rounded-lg">
         <form class="" action="login.php" method="POST">
-            <input class="row justify-content-center m-3" name="usuario" type="text" placeholder="Ingrese su nombre">
-            <input class="row justify-content-center m-3" name="email" type="text" placeholder="Ingrese su email">
+            <input class="row justify-content-center m-3" name="usuario" type="text" placeholder="Ingrese su nombre" required>
+            <input class="row justify-content-center m-3" name="email" type="text" placeholder="Ingrese su email" required>
             <input class="row justify-content-center m-3" name="passwrd" type="password"
-                placeholder="Ingrese su contraseña">
+                placeholder="Ingrese su contraseña" required>
             <div class="d-flex justify-content-center m-3">
                 <input class="d-flex btn btn-primary" style="background-color:#059228" type="submit" value="Acceder">
             </div>

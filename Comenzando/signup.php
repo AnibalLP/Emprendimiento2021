@@ -42,12 +42,12 @@
     <h1 class="d-flex justify-content-center aling-center m-5">Registro</h1>
     <div class="d-flex justify-content-center rounded-3 rounded-lg">
         <form action="signup.php" method="POST">
-            <input class="row justify-content-center m-3" name="usuario" type="text" placeholder="Ingrese su nombre">
-            <input class="row justify-content-center m-3" name="email" type="text" placeholder="Ingrese su email">
+            <input class="row justify-content-center m-3" name="usuario" type="text" placeholder="Ingrese su nombre" required>
+            <input class="row justify-content-center m-3" name="email" type="text" placeholder="Ingrese su email" required>
             <input class="row justify-content-center m-3" name="password" type="password"
-                placeholder="Ingrese una contraseña">
+                placeholder="Ingrese una contraseña" required>
             <input class="row justify-content-center m-3" name="confirm_password" type="password"
-                placeholder="Confirme contraseña">
+                placeholder="Confirme contraseña" required>
             <input class="col-md-10 justify-content-center m-3" type="submit" value="Enviar">
         </form>
 
