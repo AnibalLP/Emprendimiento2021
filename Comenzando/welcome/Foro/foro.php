@@ -2,18 +2,15 @@
 
   require '../../database.php';
 
-    $sql = "INSERT INTO mensajes (id,id_user,msj) VALUES (:id,:id_user,:msj)";
+    $sql = "INSERT INTO mensajes (id_msj,id,msj) VALUES (:id,:id_user,:msj)";
     $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':id_msj', $_POST['id_msj']);
     $stmt->bindParam(':id', $_POST['id']);
-    $stmt->bindParam(':id_user', $_POST['id_user']);
     $stmt->bindParam(':msj', $_POST['msj']);
-    $stmt->execute();
-
     $vista=$_POST['msj'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +34,7 @@
                 
                 foreach($mensajes as $vista)
                 {
-                   echo '<a>' .$vista. '</a>';
+                   echo '<a>' .$vista.'</a>';
                 }
                 ?>
 
